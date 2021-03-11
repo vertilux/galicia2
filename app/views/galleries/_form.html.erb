@@ -1,0 +1,30 @@
+<%= form_for @gallery, html: { multipart: true, class: "contact-form" } do |form| %>
+  <% if @gallery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gallery.errors.count, "error") %> prohibited this gallery from being saved:</h2>
+
+      <ul>
+      <% @gallery.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-field-wrapper">
+    <%= form.text_field :title, placeholder: :title, class: "input-sm form-full", require: true %>
+  </div>
+
+  <div class="form-field-wrapper">
+    <%= form.text_area :description, placeholder: :description, class: "form-full" %>
+  </div>
+
+  <div class="form-field-wrapper">
+    <%= form.label :images %>
+    <%= form.file_field :images, multiple: true, class: "input-sm form-full" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit nil, class: "btn btn-md btn-black form-full" %>
+  </div>
+<% end %>

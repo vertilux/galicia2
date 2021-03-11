@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV['DB_HOST'] %>
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWD'] %>
+  port: <%= ENV['DB_PORT'] %>
+  pool: 5
+  sslmode: require
+
+development:
+  <<: *default
+  database: galicia2
+
+production:
+  <<: *default
+  database: galicia2
+
+test:
+  <<: *default
+  database: galicia2_test

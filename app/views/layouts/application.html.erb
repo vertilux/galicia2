@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galicia2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Favicone Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/ionicons.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/plugin/animate.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <section id="preloader">
+      <div class="loader" id="loader">
+        <div class="loader-img"></div>
+      </div>
+    </section>
+
+    <!-- Sidebar Menu -->
+    <%= render 'shared/sidebar' %>
+
+    <!-- Site Wraper -->
+    <div class="wrapper">
+      <%= render 'shared/header' %>
+
+      <%= yield %>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <!-- JS -->
+    <%= render 'shared/js' %>
+  </body>
+</html>

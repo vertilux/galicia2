@@ -1,0 +1,26 @@
+<header id="header" class="header header-transparent header--sticky">
+  <!-- Nav Bar -->
+  <nav id="navigation" class="header-nav">
+    <div class="container">
+      <div class="row d-flex flex-md-row align-items-center">
+        <div class="logo mr-auto">
+          <a href="index.html">
+          <%= link_to root_path do %>
+            <img class="logo-dark" src="<%= asset_path 'img/logo-black.png' %>" alt="GaliciaII" />
+            <img class="logo-light" src="<%= asset_path 'img/logo-white.png' %>" alt="GaliciaII" />
+          <% end %>
+        </div>
+
+        <div class="nav-icons">
+          <div class="nav-icon-item d-lg-none">
+            <span class="nav-icon-trigger menu-mobile-btn align-middle"><i class="ion"></i></span>
+          </div>
+          <div class="nav-icon-item">
+            <span class="nav-icon-trigger sidebar-menu_btn align-middle"><i class="ion ion-navicon"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Nav Bar -->
+</header>

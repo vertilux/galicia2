@@ -1,14 +1,29 @@
 <section id="intro">
   <div class="flexslider fullscreen-carousel hero-slider-1 ">
     <ul class="slides">
-      <% @galleries.each do |gallery| %>
+      <% if @galleries.any? %>
+        <% @galleries.each do |gallery| %>
+          <li data-slide="light-slide">
+            <div class="slide-bg-image overlay-light parallax parallax-section1" data-background-img="<%= rails_blob_url(gallery.images.first) %>">
+              <div class="js-Slide-fullscreen-height container">
+                <div class="intro-content">
+                  <div class="intro-content-inner">
+                    <h2 class="h2"><%= gallery.title %></h2>
+                    <p class="lead"><%= gallery.description %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% else %>
         <li data-slide="light-slide">
-          <div class="slide-bg-image overlay-light parallax parallax-section1" data-background-img="<%= rails_blob_url(gallery.images.first) %>">
+          <div class="slide-bg-image overlay-light parallax parallax-section1" data-background-img="<%=  asset_path 'img/bkg-gallery.png' %>">
             <div class="js-Slide-fullscreen-height container">
               <div class="intro-content">
                 <div class="intro-content-inner">
-                  <h2 class="h2"><%= gallery.title %></h2>
-                  <p class="lead"><%= gallery.description %></p>
+                  <h2 class="h2">Welcome to Galicia II</h2>
+                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum.</p>
                 </div>
               </div>
             </div>

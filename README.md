@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+### Color Palette
+
+- #01234c
+- #014b60
+- #4a91bb
+- #a6d0ef
+- #ffffff
